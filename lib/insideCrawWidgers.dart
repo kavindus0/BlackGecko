@@ -65,7 +65,7 @@ class hadalaRoute extends StatelessWidget {
         title:  Row(
           children: [
             // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
-            Hero(tag:"hadala",child: Expanded(child: Text('කපුටන් හැඩලීම',style: Theme.of(context).textTheme.headlineMedium,))),
+            Hero(tag:"hadala",child: Text('කපුටන් හැඩලීම',style: Theme.of(context).textTheme.headlineMedium)),
           ],
         ),
       ),
