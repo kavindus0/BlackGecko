@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-////////////////////////////////
 class CrawDevideWidget extends StatelessWidget {
   const CrawDevideWidget({
     required this.lableText,
@@ -12,7 +11,6 @@ class CrawDevideWidget extends StatelessWidget {
   final String tagTextCrawDevide;
   final Widget route;
 
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -22,7 +20,6 @@ class CrawDevideWidget extends StatelessWidget {
     );
   }
 }
-
 
 
 // wasuru card and endpoint -----------------------------------------------------
