@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-
+////////////////////////////////
 class CrawDevideWidget extends StatelessWidget {
   const CrawDevideWidget({
     required this.lableText,
@@ -27,9 +27,14 @@ class CrawDevideWidget extends StatelessWidget {
 
 // wasuru card and endpoint -----------------------------------------------------
 
-class wasuruRoute extends StatelessWidget {
+class wasuruRoute extends StatefulWidget {
   const wasuruRoute({super.key});
 
+  @override
+  State<wasuruRoute> createState() => _wasuruRouteState();
+}
+
+class _wasuruRouteState extends State<wasuruRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,9 +60,14 @@ class wasuruRoute extends StatelessWidget {
 
 // hadala card and endpoint -----------------------------------------------------
 
-class hadalaRoute extends StatelessWidget {
+class hadalaRoute extends StatefulWidget {
   const hadalaRoute({super.key});
 
+  @override
+  State<hadalaRoute> createState() => _hadalaRouteState();
+}
+
+class _hadalaRouteState extends State<hadalaRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

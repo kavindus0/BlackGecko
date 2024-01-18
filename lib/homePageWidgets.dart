@@ -23,9 +23,14 @@ class CrawDevideWidget extends StatelessWidget {
 
 // wasuru card and endpoint -----------------------------------------------------
 
-class wasuruRoute extends StatelessWidget {
+class wasuruRoute extends StatefulWidget {
   const wasuruRoute({super.key});
 
+  @override
+  State<wasuruRoute> createState() => _wasuruRouteState();
+}
+
+class _wasuruRouteState extends State<wasuruRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,9 +56,14 @@ class wasuruRoute extends StatelessWidget {
 
 // hadala card and endpoint -----------------------------------------------------
 
-class hadalaRoute extends StatelessWidget {
+class hadalaRoute extends StatefulWidget {
   const hadalaRoute({super.key});
 
+  @override
+  State<hadalaRoute> createState() => _hadalaRouteState();
+}
+
+class _hadalaRouteState extends State<hadalaRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -147,7 +157,10 @@ class _GeckoRouteState extends State<GeckoRoute> {
             children: [
               Padding(
                 padding: EdgeInsets.all(8.0),
-                child: SizedBox(height: 50,child: SearchBar()),
+                child: SizedBox(height: 50,child: SearchBar(
+                  leading: Icon(Icons.search_outlined),
+                  hintText: ("Head"),
+                )),
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
