@@ -1,4 +1,7 @@
+import 'package:blackgecko/SearchPage/crawPoops.dart';
 import 'package:flutter/material.dart';
+import 'package:blackgecko/wasuruSummery.dart';
+import 'package:blackgecko/CrawPoops.dart';
 
 class CrawDevideWidget extends StatelessWidget {
   const CrawDevideWidget({
@@ -14,13 +17,23 @@ class CrawDevideWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ElevatedButton(style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28))),onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => route));
-      }, child:  Hero(tag:tagTextCrawDevide,child: Text(lableText,style: Theme.of(context).textTheme.headlineMedium,))),
+      child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(28))),
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => route));
+          },
+          child: Hero(
+              tag: tagTextCrawDevide,
+              child: Text(
+                lableText,
+                style: Theme.of(context).textTheme.headlineMedium,
+              ))),
     );
   }
 }
-
 
 // wasuru card and endpoint -----------------------------------------------------
 
@@ -39,16 +52,19 @@ class _wasuruRouteState extends State<wasuruRoute> {
         title: Row(
           children: [
             // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
-            Hero(tag:"wasuru",child: Text('කපුටන් වසුරුකිරීම',style: Theme.of(context).textTheme.headlineMedium)),
+            Hero(
+                tag: "wasuru",
+                child: Text('කපුටන් වසුරුකිරීම',
+                    style: Theme.of(context).textTheme.headlineMedium)),
           ],
         ),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pop(context) ;
+            Navigator.pop(context);
           },
-          child: const Text('Go back!'),
+          child: CrawPoops(),
         ),
       ),
     );
@@ -69,22 +85,19 @@ class _hadalaRouteState extends State<hadalaRoute> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Row(
+        title: Row(
           children: [
             // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
-            Hero(tag:"hadala",child: Text('කපුටන් හැඩලීම',style: Theme.of(context).textTheme.headlineMedium)),
+            Hero(
+                tag: "hadala",
+                child: Text('කපුටන් හැඩලීම',
+                    style: Theme.of(context).textTheme.headlineMedium)),
           ],
         ),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context) ;
-          },
-          child: const Text('Go back!'),
-        ),
+        child: CrawPoops(),
       ),
     );
   }
 }
-

@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Craw {
+class CrawPoops {
   final String positionName;
   final String Effect;
 
-    const Craw({
-    required this.positionName,
-    required this.Effect
-  });
+  const CrawPoops({required this.positionName, required this.Effect});
 }
-
-

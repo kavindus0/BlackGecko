@@ -1,12 +1,9 @@
+import 'package:blackgecko/CrawPoops.dart';
+import 'package:blackgecko/CrawPoops.dart';
 import 'package:flutter/material.dart';
-import 'package:blackgecko/SearchPage/gecko.dart';
-import 'package:searchable_listview/searchable_listview.dart';
 
-///////// Stateful Widget With SearchBar and ListView //////////////////////////
-// gecko card and endpoint -----------------------------------------------------
-
-class GeckoRoute extends StatefulWidget {
-  const GeckoRoute({super.key});
+class CrawPoops extends StatelessWidget {
+  const CrawPoops({super.key});
 
   @override
   State<GeckoRoute> createState() => _GeckoRouteState();
