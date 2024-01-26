@@ -1,7 +1,6 @@
-import 'package:blackgecko/SearchPage/crawPoops.dart';
-import 'package:flutter/material.dart';
-import 'package:blackgecko/wasuruSummery.dart';
 import 'package:blackgecko/CrawPoops.dart';
+import 'package:flutter/material.dart';
+import 'package:blackgecko/CrawSound.dart';
 
 class CrawDevideWidget extends StatelessWidget {
   const CrawDevideWidget({
@@ -48,26 +47,18 @@ class _wasuruRouteState extends State<wasuruRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
-            Hero(
-                tag: "wasuru",
-                child: Text('කපුටන් වසුරුකිරීම',
-                    style: Theme.of(context).textTheme.headlineMedium)),
-          ],
+        appBar: AppBar(
+          title: Row(
+            children: [
+              // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
+              Hero(
+                  tag: "wasuru",
+                  child: Text('කපුටන් වසුරුකිරීම',
+                      style: Theme.of(context).textTheme.headlineMedium)),
+            ],
+          ),
         ),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: CrawPoops(),
-        ),
-      ),
-    );
+        body: CrawPoopsSearch());
   }
 }
 
@@ -84,20 +75,17 @@ class _hadalaRouteState extends State<hadalaRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
-            Hero(
-                tag: "hadala",
-                child: Text('කපුටන් හැඩලීම',
-                    style: Theme.of(context).textTheme.headlineMedium)),
-          ],
+        appBar: AppBar(
+          title: Row(
+            children: [
+              // Image.asset(width: 70,fit:BoxFit.cover,height:70,'assets/images/gecko.png',),
+              Hero(
+                  tag: "hadala",
+                  child: Text('කපුටන් හැඩලීම',
+                      style: Theme.of(context).textTheme.headlineMedium)),
+            ],
+          ),
         ),
-      ),
-      body: Center(
-        child: CrawPoops(),
-      ),
-    );
+        body: CrawSoundSearch());
   }
 }

@@ -1,29 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:blackgecko/SearchPage/crawPoops.dart';
+import 'package:blackgecko/SearchPage/crawSound.dart';
 import 'package:searchable_listview/searchable_listview.dart';
 
-class CrawPoopsSearch extends StatefulWidget {
-  const CrawPoopsSearch({super.key});
+class CrawSoundSearch extends StatefulWidget {
+  const CrawSoundSearch({super.key});
 
   @override
-  State<CrawPoopsSearch> createState() => _CrawSoundSearchState();
+  State<CrawSoundSearch> createState() => _CrawSoundSearchState();
 }
 
-class _CrawSoundSearchState extends State<CrawPoopsSearch> {
-  final List<CrawPoops> _crawPoops = [
-    const CrawPoops(positionName: "posGGame", Effect: "Efct"),
-    const CrawPoops(positionName: "poFGFonName", Effect: "Efct"),
-    const CrawPoops(positionName: "posFGFGe", Effect: "Eft"),
-    const CrawPoops(positionName: "posGGame", Effect: "Efct"),
-    const CrawPoops(positionName: "poFGFonName", Effect: "Efct"),
-    const CrawPoops(positionName: "posFGFGe", Effect: "Eft"),
-    const CrawPoops(positionName: "posGGame", Effect: "Efct"),
-    const CrawPoops(positionName: "poFGFonName", Effect: "Efct"),
-    const CrawPoops(positionName: "posFGFGe", Effect: "Eft"),
-    const CrawPoops(positionName: "posGGame", Effect: "Efct"),
-    const CrawPoops(positionName: "poFGFonName", Effect: "Efct"),
-    const CrawPoops(positionName: "posFGFGe", Effect: "Eft"),
-    const CrawPoops(positionName: "poe", Effect: "Efft"),
+class _CrawSoundSearchState extends State<CrawSoundSearch> {
+  final List<CrawSound> _crawSounds = [
+    const CrawSound(positionName: "positionName", Effect: "Effect"),
+    const CrawSound(positionName: "positionName", Effect: "Effect"),
+    const CrawSound(positionName: "positionName", Effect: "Effect"),
+    const CrawSound(positionName: "positionName", Effect: "Effect"),
+    const CrawSound(positionName: "positionName", Effect: "Effect"),
   ];
 
   @override
@@ -38,12 +30,12 @@ class _CrawSoundSearchState extends State<CrawPoopsSearch> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: SearchableList<CrawPoops>(
-            initialList: _crawPoops,
+          child: SearchableList<CrawSound>(
+            initialList: _crawSounds,
             style: const TextStyle(fontSize: 25),
-            builder: (List<CrawPoops> list, int index, CrawPoops item) =>
+            builder: (List<CrawSound> list, int index, CrawSound item) =>
                 CrawSoundItem(item: item),
-            filter: (value) => _crawPoops
+            filter: (value) => _crawSounds
                 .where(
                   (element) =>
                       element.positionName.toLowerCase().contains(value),
@@ -87,7 +79,7 @@ class EmptyView extends StatelessWidget {
 }
 
 class CrawSoundItem extends StatelessWidget {
-  final CrawPoops item;
+  final CrawSound item;
   const CrawSoundItem({
     super.key,
     required this.item,

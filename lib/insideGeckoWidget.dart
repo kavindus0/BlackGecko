@@ -133,7 +133,6 @@ class EmptyView extends StatelessWidget {
 
 class GeckoItem extends StatelessWidget {
   final Gecko item;
-
   const GeckoItem({
     super.key,
     required this.item,
