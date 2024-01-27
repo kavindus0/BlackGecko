@@ -2,6 +2,8 @@
 
 Horoscope App
 
+![repository-open-graph-template](https://github.com/kavindus0/BlackGecko/assets/126804361/bab983eb-9f7d-4d19-ae63-4d050e351874)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
