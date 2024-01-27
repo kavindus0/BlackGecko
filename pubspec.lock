@@ -127,10 +127,10 @@ packages:
     dependency: "direct main"
     description:
       name: info_popup
-      sha256: "2cfc657db0037cc8a87eeceee0a3e078438fd22c3877fa0f20595f44d5b81ece"
+      sha256: "82f54db29c19802c9b499de5d87a81a901e27a804677902a5b540df35e6493f1"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.6"
+    version: "4.3.1"
   js:
     dependency: transitive
     description:
@@ -199,10 +199,10 @@ packages:
     dependency: "direct main"
     description:
       name: searchable_listview
-      sha256: "20a15061bed241c843cacd07387cbeeb2f41012af729062a7f1a193b6ce4f181"
+      sha256: fad781a412d1fec251c7a66e4aca49e49ab8b7104bda733b476d4b5c81891bea
       url: "https://pub.dev"
     source: hosted
-    version: "2.10.0"
+    version: "2.10.1"
   sky_engine:
     dependency: transitive
     description: flutter
