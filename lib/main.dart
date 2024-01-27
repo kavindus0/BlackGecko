@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:blackgecko/mainHomePage.dart';
+import 'package:animated_icon/animated_icon.dart';
+import 'package:auto_scroll/auto_scroll.dart';
 
 void main() {
   runApp(const MyApp());

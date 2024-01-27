@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:blackgecko/SearchPage/gecko.dart';
 import 'package:searchable_listview/searchable_listview.dart';
+import 'package:animated_icon/animated_icon.dart';
+import 'package:auto_scroll/auto_scroll.dart';
 
 ///////// Stateful Widget With SearchBar and ListView //////////////////////////
 // gecko card and endpoint -----------------------------------------------------
@@ -66,6 +68,13 @@ class _GeckoRouteState extends State<GeckoRoute> {
     /////////mettnin pahala search eka
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                openDialog();
+              },
+              icon: const Icon(Icons.info_rounded))
+        ],
         title: Row(
           children: [
             Hero(
@@ -111,6 +120,41 @@ class _GeckoRouteState extends State<GeckoRoute> {
       ),
     );
   }
+
+  Future openDialog() => showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+            title: null,
+            content: const SingleChildScrollView(
+              child: Column(
+                children: [
+                  Text(
+                      style: TextStyle(fontSize: 25),
+                      "සූනෙකු ඇඟට වැටීම කිසියම් සුබ හෝ අසුබ දෙයක පෙරනිමිත්තක් ලෙස පුරාතනයේ පටන් අදටත් ලෝකවාසී බොහෝ ජන සමාජයන්අතර විස්වාසයක් පවතී. \n "),
+                  Text(
+                      style: TextStyle(fontSize: 25),
+                      "හූනා පමණක් නොව කටුස්සාද ඇඟට වැටීම් සිදුවන අවස්තා ස්තාන අනුව පලාඵල කියැවේ. සූනෙකු ඇඟට වැටීමේදී එයි ඵල විපාකයන්, එම සිදුවීම සිදුවන විට උදාවී පැවති ලග්නය, දිනට යෙදී ඇති නැකත සහ තිථිය අනුව මෙන්ම දිශාව අනුවද වෙනසකට ලක්වේ.\n"),
+                  Text(
+                      style: TextStyle(fontSize: 25),
+                      "සූනෙකු ඇඟට වැටීම සිදුවන්නේ සටවක, අටවක, දොළොස්‌වක, රිට්‌ටා පෝය තිථි යෙදී ඇති දිනක නම්, එම තිථි යෙදී ඇත්තේ ඉරිදා, අඟහරුවාදා, සෙනසුරාදා යන දිනයක නම් එදිනට උදාවී ඇත්තේ බෙරණ කැති, මුවසිරස, අද, අස්‌ලිය, මා, විසා, දෙට මුල, සුවන, පුවපුටුප, උත්‍රපුටුප යන නැකැත්වලින් එකක් නම්, එම මොහොත වනවිට උදාවී පවතින තත්කාල ලග්නය වෘෂභ, මිථුන, කටක, කන්‍යා, කුම්භ, මීන යන ලග්නවලින් එකක් නම් සූනන් ඇගට වැටීමෙන් කියවෙන අසුබ පලාඵලයන් ක්‍රියාත්මක වීමේ වැඩි අවස්තාවක් යෙදේ.\n"),
+                  Text(
+                      style: TextStyle(fontSize: 25),
+                      "ඉහත සදහන් දින, තිථි, නැකැත් සහ ලග්න වෙනත් ඒකකක් වූවේ නම් ප්‍රතිඵල නිෂ්ක්‍රිය වී සුබ යැයි කියවෙන ප්‍රථිපල ක්‍රියාත්මක වීමටත් වැඩි අවස්තාවක් පවතී.\n"),
+                  Text(
+                    "ඉහත දැක්වෙන්නේ ඒ ආකාරයෙන් සූනන් හෝ කටුස්සන් ශරීරයේ ඒ ඒ ස්තානයට වැටීමෙන් ඇති වන සුබ සහ අසුබ ප්‍රතිඵලයන් වේ.\n",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ],
+              ),
+            ),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Icon(Icons.close))
+            ],
+          ));
 }
 
 class EmptyView extends StatelessWidget {

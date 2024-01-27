@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:blackgecko/SearchPage/crawPoops.dart';
 import 'package:searchable_listview/searchable_listview.dart';
+import 'package:animated_icon/animated_icon.dart';
 
 class CrawPoopsSearch extends StatefulWidget {
   const CrawPoopsSearch({super.key});
